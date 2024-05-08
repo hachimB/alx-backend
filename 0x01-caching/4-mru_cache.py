@@ -4,7 +4,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LRUCache(BaseCaching):
-    """LRUCache class"""
+    """MRUCache class"""
 
     def __init__(self):
         """init constructor"""
@@ -14,9 +14,7 @@ class LRUCache(BaseCaching):
         """puts keys and values in self.cache_data dictionary"""
         if key is None or item is None:
             return
-        if key in self.cache_data:
-            del self.cache_data[key]
-        elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             left_key = next(iter(self.cache_data.keys()))
             self.cache_data.pop(left_key)
             print("DISCARD: {}".format(left_key))
