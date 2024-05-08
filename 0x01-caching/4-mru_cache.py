@@ -27,4 +27,3 @@ class MRUCache(BaseCaching):
             return None
         self.mru_key = key
         return self.cache_data[key]
-
