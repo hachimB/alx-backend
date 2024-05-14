@@ -1,17 +1,17 @@
-# English translations for MyProject.
-# Copyright (C) 2024 MyOrganization
-# This file is distributed under the same license as the MyProject project.
-# John Doe <johndoe@example.com>, 2024.
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: MyProject 1.0\n"
-"Report-Msgid-Bugs-To: bugs@example.com\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-14 16:20+0100\n"
 "PO-Revision-Date: 2024-05-14 16:20+0100\n"
-"Last-Translator: John Doe <johndoe@example.com>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
-"Language-Team: en <team@example.com>\n"
+"Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
