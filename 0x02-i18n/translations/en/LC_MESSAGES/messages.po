@@ -25,4 +25,3 @@ msgstr "Welcome to Holberton"
 #: 3-app.py:16
 msgid "home_header"
 msgstr "Hello world!"
-
