@@ -16,8 +16,8 @@ def home() -> str:
     home_header = gettext("home_header")
     return render_template(
         '3-index.html',
-        home_title=home_title,
-        home_header=home_header,
+        # home_title=home_title,
+        # home_header=home_header,
         lang=get_locale())
 
 
