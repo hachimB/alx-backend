@@ -17,7 +17,7 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@app.route("/task1")
+@app.route("/")
 def task1():
     """Task 1"""
     return render_template("1-index.html")
