@@ -12,8 +12,8 @@ babel = Babel(app)
 @app.route("/")
 def home() -> str:
     """function to parametrize our templates"""
-    home_title = gettext("home_title")
-    home_header = gettext("home_header")
+    # home_title = gettext("home_title")
+    # home_header = gettext("home_header")
     return render_template(
         '3-index.html',
         # home_title=home_title,
