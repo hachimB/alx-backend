@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Parametrize templates"""
-from flask import Flask, render_template
-from flask_babel import Babel, _
+from flask import request, Flask, render_template
+from flask_babel import Babel
 
 
 app = Flask(__name__)
 babel = Babel(app)
 
 
-@app.context_processor
-def inject_user():
-    return dict(_=_)
+@babel.localeselector
+def get_locale():
+    """"get_local
+    """
+    return request.accept_languages.best_match(app.config['en', 'fr'])
 
 
 @app.route("/")
