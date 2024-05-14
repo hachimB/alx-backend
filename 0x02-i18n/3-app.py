@@ -2,7 +2,7 @@
 """Parametrize templates
 """
 from flask import Flask, render_template
-from flask_babel import Babel, gettext
+from flask_babel import Babel, gettext, get_locale
 
 
 app = Flask(__name__)
@@ -17,7 +17,8 @@ def home() -> str:
     return render_template(
         '3-index.html',
         home_title=home_title,
-        home_header=home_header)
+        home_header=home_header,
+        lang=get_locale())
 
 
 if __name__ == "__main__":
