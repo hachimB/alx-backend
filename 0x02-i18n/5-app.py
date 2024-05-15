@@ -15,6 +15,7 @@ users = {
     4: {"name": "Teletubby", "locale": None, "timezone": "Europe/London"},
 }
 
+
 def get_user(login_as):
     """get_user"""
     if not login_as:
