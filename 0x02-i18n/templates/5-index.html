@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ _("home_title") }}</title>
+</head>
+<bodyh2>
+    <h1>{{ _("home_header") }}</h1>
+    {% if g.user %}
+        <h2>{{ _("You are logged in as", g.user.name") }}</h2>
+    {% else %}
+        <h2>{{ _("You are not logged in") }}</h2>
+</body>
+</html>
