@@ -8,13 +8,13 @@ app = Flask(__name__)
 babel = Babel(app)
 
 
-# @babel.localeselector
-# def get_locale():
-#     """get_locale"""
-#     locale = request.args.get('locale')
-#     if locale in ['en', 'fr']:
-#         return locale
-#     return request.accept_languages.best_match(['en', 'fr'])
+@babel.localeselector
+def get_locale():
+    """get_locale"""
+    user = getattr(g, 'user', None)
+    if user is not None:
+        return user.get('locale')
+    return request.accept_languages.best_match(['en', 'fr'])
 
 
 users = {
@@ -42,6 +42,8 @@ def before_request():
     user = get_user(user_id)
     if user is not None:
         g.user = user
+    else:
+        g.user = None
 
 
 @app.route("/")
