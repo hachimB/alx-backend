@@ -32,16 +32,6 @@ def before_request():
         g.user = user
 
 
-@babel.localeselector
-def get_locale():
-    """"get_local
-    """
-    locale = request.args.get('locale')
-    if locale in ['en', 'fr']:
-        return locale
-    return request.accept_languages.best_match(['en', 'fr'])
-
-
 @app.route("/")
 def home() -> str:
     """function to parametrize our templates"""
