@@ -8,6 +8,15 @@ app = Flask(__name__)
 babel = Babel(app)
 
 
+# @babel.localeselector
+# def get_locale():
+#     """get_locale"""
+#     locale = request.args.get('locale')
+#     if locale in ['en', 'fr']:
+#         return locale
+#     return request.accept_languages.best_match(['en', 'fr'])
+
+
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
