@@ -20,7 +20,10 @@ def get_user(login_as):
     """get_user"""
     if not login_as:
         return None
-    return users.get(int(login_as))
+    try:
+        return users.get(int(login_as))
+    except ValueError:
+        return None
 
 
 @app.before_request
